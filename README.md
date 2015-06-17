@@ -1,5 +1,4 @@
-# dvet
-Digital Video Evaluation Tool
+# Digital Video Evaluation Tool
 
 Esse sistema consiste em uma interface gráfica para automatizar a execução de diversos algoritmos de processamento de vídeo digital. O usuário terá acesso a uma vasta base de vídeos YUV de referência. Esses vídeos serão submetidos a todos os algoritmos disponíveis no sistema e todas as informações resultantes relacionadas a cada vídeo serão armazenadas em um banco de dados. Serão implementadas diversas métricas de avaliação de qualidade de vídeo digital, diferentes algoritmos de transcodificação e técnicas de transformação. O framework de algortimos deve ser implementado de forma modular para suportar a adição de novos algoritmos a qualquer momento. 
 
@@ -8,3 +7,6 @@ Uma das principais virtudes desse sistema será a automatização da execução 
 O framework deve ser disponibilizado como um DSO (Dynamic Shared Object) que será ligado (linked) à interface gráfica desenvolvida. O objetivo dessa forma de artefato é poder usar os métodos disponibilizados dentro de um codificador de vídeo qualquer como forma de estudar relações entre esses algoritmos e o processo de codificação de codificadores escritos em C++. 
 
 Esse projeto se propõe a desenvolver uma ferramenta de referência para o ambiente acadêmico e disponibilizá-la sob licenças de código livre para a comunidade.
+
+### Copyright
+Copyright (C) 2015, IFPB Digital Signal Processing Group.
