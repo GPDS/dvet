@@ -1,4 +1,5 @@
-#include "main.h"
+#include "common.h"
+#include "Image.h"
 
 	void Image::setRow (int row)
 	{

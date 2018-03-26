@@ -1,4 +1,7 @@
-#include "main.h"
+#include "common.h"
+#include "Image.h"
+#include "Video.h"
+#include "SSIM.h"
 
 
 void SSIM::computeSSIM(Video& RefVideo, Video& TestVideo, int row, int col)
@@ -10,7 +13,7 @@ void SSIM::computeSSIM(Video& RefVideo, Video& TestVideo, int row, int col)
 		   std_Ref = 0, std_Test = 0,
 		   cov_RefTest = 0;
 	Image teste;
-	int noFrames = RefVideo.returnFrames();
+	int noFrames = TestVideo.returnFrames();
 	int noLines = row;
 	int noCols = col ;
 	int blocks=8;

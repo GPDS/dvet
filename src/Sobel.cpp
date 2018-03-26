@@ -1,4 +1,6 @@
-#include "main.h"
+#include "Image.h"
+#include "common.h"
+#include "Sobel.h"
 
 void Sobel::allocatePixelMap(int row, int col,int coef1, int coef2){
 
