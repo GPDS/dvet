@@ -1,4 +1,7 @@
-#include "main.h"
+#include "common.h"
+#include "Image.h"
+#include "Video.h"
+
 	void Video::setNumberOfFrames(int row, int col)
 	{
 		file.seekg(0, file.end);
@@ -38,7 +41,7 @@
 	{
 		file.open (Name, ios::in | ios::binary);
 		if (!file.is_open())
-			cout << "File isn't open." << endl;
+			cout << "File isn't open!" << endl;
 
 		setNumberOfFrames(row , col);
 	}
@@ -73,7 +76,7 @@
 			 Name.open("Video.yuv", ios::app | ios::binary|ios::out);
 
 		if (!Name)
-			cout << "File isn't open." << endl;
+			cout << "File isn't open!!" << endl;
 			
 		else //if the file is open
 		{

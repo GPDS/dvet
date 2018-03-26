@@ -1,0 +1,18 @@
+INSTALL_PATH    = /usr/local
+#INSTALL_PATH    = .
+
+CC              = gcc
+CXX             = g++
+AR              = ar
+AS              = as
+LD              = ld
+STRIP           = strip
+RANLIB          = ranlib
+
+INCDIR          = ./include/
+SRCDIR          = ./src/
+BINDIR          = ./bin/
+TESTSDIR        = ./tests/
+
+OK              = \033[30;32mOK\033[m
+FAILED          = \033[30;31mFAILED\033[m

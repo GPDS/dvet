@@ -1,4 +1,9 @@
-#include "main.h"
+#include "common.h"
+#include "Image.h"
+#include "Video.h"
+#include "Sobel.h"
+#include "PWSSIM.h"
+
 
 void PWSSIM::computePWSSIM(Video& RefVideo, Video& TestVideo,  int row, int col)
 {
@@ -16,7 +21,7 @@ void PWSSIM::computePWSSIM(Video& RefVideo, Video& TestVideo,  int row, int col)
 	int coefs[2];
 	Image test;
 	Sobel RefSobel;
-	int noFrames = RefVideo.returnFrames();
+	int noFrames = TestVideo.returnFrames();
 	int noLines= row;
 	int noCols = col;
 

@@ -1,5 +1,7 @@
-#include "main.h"
-
+#include "common.h"
+#include "Image.h"
+#include "Video.h"
+#include "PSNR.h"
 
 void PSNR::computePSNR(Video &RefVideo, Video &TestVideo,int row,int col)
 { 
@@ -7,7 +9,7 @@ void PSNR::computePSNR(Video &RefVideo, Video &TestVideo,int row,int col)
 
     int i=0,j=0, N=0;
 	int maxPixelValue = 255;
-    int noFrames = RefVideo.returnFrames();
+    int noFrames = TestVideo.returnFrames();
     int noPixels = row*col;
 
     double MSE = 0;
@@ -48,7 +50,7 @@ void PSNR::writeResultsInFile()
 	ofstream Name("store/PSNR.txt", ios::app);
 	ofstream time_exec("store/PSNR_Timeexec.txt",ios::app);
 	if (!Name || !time_exec)
-		cout << "File couldn't open" << endl;
+		cout << "File couldn't open!!!" << endl;
 	else
 	{
 		Name << getPSNR() << endl;
