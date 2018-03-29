@@ -23,7 +23,7 @@ void usage(){
 	cout << "Use the command (Exemple): \n"
 			"./bin/main -ref [reference video] -eva [evaluated video] -wht [frames width] -htg [frames height] -f [number of frames]\n" 
 			"Example:\n"
-			"./bin/main video_reference.yuv video_test.yuv -wht 3840 -htg 2160 -f 120"<< endl;
+			"./bin/main video_reference.yuv video_test.yuv -wht 3840 -hgt 2160 -f 120"<< endl;
 }
 
 
@@ -61,13 +61,12 @@ int main (int argc, char const* argv[]){
     }
 
 
-// set input pareameters
 	for (int i = 0; i < argc; i++){
 		if (command_input[i].compare("-f") == 0){
 			numFrames = converterStrToInt(command_input[i+1]);
 		}else if (command_input[i].compare("-wht") == 0){
 			row = converterStrToInt(command_input[i+1]);
-		}else if (command_input[i].compare("-htg") == 0){
+		}else if (command_input[i].compare("-hgt") == 0){
 			col = converterStrToInt(command_input[i+1]);
 		}else if (command_input[i].compare("-eva") == 0){
 			eva_path = command_input[i+1];
